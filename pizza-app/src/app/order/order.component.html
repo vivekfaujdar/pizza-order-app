@@ -1,0 +1,57 @@
+<!-- <div class="container mt-5">
+    <h2 class="text-center mb-4">Order Details</h2>
+  
+    <div *ngIf="order" class="card">
+      <div class="card-header text-white bg-primary">
+        <h5 class="mb-0">Order #{{ order.orderMasterId }}</h5>
+      </div>
+      <div class="card-body">
+      
+        <table class="table table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Pizza</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Unit Price</th>
+              <th scope="col">Total Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of order.orderDetails">
+              <td>{{ item.pizzaId }}</td>
+              <td>{{ item.quantity }}</td>
+              <td>{{ item.unitPrice | currency }}</td>
+              <td>{{ item.totalPrice | currency }}</td>
+            </tr>
+          </tbody>
+        </table>
+  
+       
+        <div class="d-flex justify-content-end">
+          <div class="text-right">
+            <p><strong>Total Price:</strong> {{ order.totalPrice | currency }}</p>
+            <p><strong>Discount:</strong> -{{ discountAmount | currency }}</p>
+            <p><strong>Final Price:</strong> {{ finalPrice | currency }}</p>
+          </div>
+        </div>
+  
+       
+        <div class="mt-4">
+          <h5>Apply Coupon</h5>
+          <div class="input-group mb-3">
+            <input type="text" [(ngModel)]="couponCode" class="form-control" placeholder="Enter coupon code">
+            <div class="input-group-append">
+              <button class="btn btn-primary" (click)="applyCoupon()">Apply</button>
+            </div>
+          </div>
+          <p *ngIf="couponError" class="text-danger">{{ couponError }}</p>
+        </div>
+      </div>
+    </div>
+    
+  
+    <div *ngIf="!order" class="text-center mt-4">
+      <p class="text-muted">Order not found.</p>
+    </div>
+  </div>
+   -->

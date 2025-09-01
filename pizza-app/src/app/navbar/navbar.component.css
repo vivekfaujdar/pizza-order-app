@@ -1,0 +1,39 @@
+/* General navbar styling */
+.navbar {
+    background-color: #007bff; /* Change to match your color scheme */
+  }
+  
+  .navbar-brand {
+    color: #ff6347;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZycvMjAwMC9zdmciIHhtbG5zOnJhdGlsZ2luZz0iL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KPHBhdGggZD0iTTEwMCAyMEw1MCA5MEw1MCA1MEwxMCA1MEw1MCA5MEw1MCA5MEwxMCA5MEw1MCA5MEwiIHN0cm9rZT0iIzAwN2JmZiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLW1pdGVybmVzPSJub3JtYWwiLz4KPC9zdmc+Cg==');
+  }
+  
+  .navbar-nav .nav-link {
+    color: #1b1818;
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: #ffeb3b; /* Highlight color for active link */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ffeb3b;
+    text-decoration: underline;
+  }
+  
+  /* Responsive navbar styling */
+  @media (max-width: 991.98px) {
+    .navbar-nav {
+      text-align: center;
+    }
+  }
+  

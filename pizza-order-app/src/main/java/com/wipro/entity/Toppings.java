@@ -1,0 +1,5 @@
+package com.wipro.entity;
+
+public enum Toppings {
+	PEPPERONI, MUSHROOMS, ONIONS, SAUSAGE, BACON, BLACK_OLIVES, GREEN_PEPPERS, PINEAPPLE, EXTRA_CHEESE
+}

@@ -1,0 +1,151 @@
+<!-- <ngb-carousel
+	#carousel
+	[interval]="1000"
+	[pauseOnHover]="pauseOnHover"
+	[pauseOnFocus]="pauseOnFocus"
+	(slide)="onSlide($event)"
+    *ngIf="popularProducts">
+		<ng-template *ngFor="let item of popularProducts" ngbSlide>
+			<div class="carousel-caption">
+				<h3>{{item.name}}</h3>
+                <p>{{item.description}}</p>
+			</div>
+			<a href="https://www.google.com" target="_blank" rel="nofollow noopener noreferrer">
+				<div class="picsum-img-wrapper">
+					<img src="{{item.imageUrl}}" alt="description" />
+				</div>
+			</a>
+		</ng-template>
+</ngb-carousel> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Pizza Paradise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        header {
+            background-color: #ff6347;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 48px;
+        }
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .content {
+            padding: 30px;
+            line-height: 1.6;
+        }
+        h2 {
+            color: #ff6347;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #f1f1f1;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-left: 5px solid #ff6347;
+        }
+        ul li span {
+            font-weight: bold;
+        }
+        footer {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Pizza Paradise!</h1>
+        <p>Your Destination for Delicious, Hand-Tossed Pizzas</p>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <p>
+                At <strong>Pizza Paradise</strong>, we believe that great pizza comes from great ingredients and a passion for quality. Established in <strong>2001</strong>, we have been serving delicious, hand-tossed pizzas made with love and care for 2 decades. Our mission is to provide you with the best pizza experience, offering a variety of fresh toppings, flavorful crusts, and mouth-watering combinations that will leave you coming back for more.
+            </p>
+
+            <h2>What Sets Us Apart?</h2>
+            <ul>
+                <li><span>Fresh Ingredients:</span> We use only the freshest produce, premium meats, and 100% real mozzarella cheese. Our sauces and dough are made from scratch daily to ensure every bite is bursting with flavor.</li>
+                <li><span>Customizable Pizzas:</span> Whether you like classic Margherita or a fully-loaded meat lover's, we offer a range of toppings and crust options to suit your taste.</li>
+                <li><span>Fast Delivery:</span> We know you can’t wait to enjoy your pizza, so we strive to deliver it hot and fresh in no time.</li>
+                <li><span>Passionate Team:</span> Our team is committed to providing the best customer service, ensuring every order meets your expectations.</li>
+            </ul>
+        </div>
+    </div>
+
+    
+
+</body>
+</html>
+
+<section style="background-color: #eee;">
+  <div class="container py-5">
+      <div class="row justify-content-center">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let item of trendyProducts">
+              <div class="card text-black mb-4" style="padding-bottom: 20px;">
+                  <div class="img-wrapper">
+                      <img src="{{item.imageUrl}}" class="card-img-top" alt="{{item.name}}" />
+                  </div>
+                  <div class="card-body">
+                      <div class="text-center">
+                          <h5 class="card-title">{{item.name}}</h5>
+                          <p class="text-muted mb-4">
+                              With {{item.crustType}} Crust and {{item.toppings}} Toppings
+                          </p>
+                      </div>
+                      <div>
+                          <div class="d-flex justify-content-between">
+                              <span>Price</span><span>Rs. {{item.price}}</span>
+                          </div>
+                      </div>
+                      <div class="d-flex justify-content-between total font-weight-bold mt-4">
+                          <span>Total</span><span>Rs. {{item.price}}</span>
+                      </div>
+                      <!-- Add View Details button -->
+                      <div class="text-center mt-3">
+                          <button [routerLink]="['/details', item.id]" class="btn btn-primary">View Details</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+  <footer>
+    © 2024 Pizza Paradise | All Rights Reserved
+</footer>

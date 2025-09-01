@@ -1,0 +1,30 @@
+.container {
+    padding: 20px;
+  }
+  
+  .image-container {
+    text-align: center;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .quantity {
+    max-width: 100px;
+  }
+  
+  .total-price {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .action-buttons .btn {
+    width: 100px;
+  }
+  
+  .ml-2 {
+    margin-left: 10px;
+  }
+  

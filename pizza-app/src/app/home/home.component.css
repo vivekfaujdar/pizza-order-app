@@ -1,0 +1,72 @@
+/* Carousel styling */
+.carousel {
+    max-width: 100%;
+    height: 800px; /* Adjust as needed */
+    margin-bottom: 0 !important; /* Ensure no margin below carousel */
+    padding-bottom: 0 !important; /* Ensure no padding below carousel */
+}
+
+/* Carousel image wrapper */
+.picsum-img-wrapper {
+    object-fit: contain;
+    height: 600px;
+    width: 100%;
+}
+
+/* Carousel image settings */
+.carousel img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Carousel caption styling */
+.carousel-caption {
+    background-color: #0000007d;
+    border-radius: 10px;
+}
+
+/* Image within the card */
+.card-img-top {
+    height: 200px; /* Set a fixed height for all images */
+    width: 100%; /* Full width of the card */
+    object-fit: cover; /* Maintain aspect ratio and crop to fit */
+}
+
+/* Image wrapper inside card */
+.img-wrapper {
+    max-height: 200px; /* Max height for the image container */
+    overflow: hidden; /* Hide overflow if the image is too large */
+}
+
+/* Card styling to ensure consistent height */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-bottom: 10px !important; /* Reduce the gap between cards */
+}
+
+/* Container adjustment */
+.container.py-5 {
+    padding-top: 0 !important; /* Reduce padding from top */
+    padding-bottom: 0 !important; /* Reduce padding from bottom */
+}
+
+/* Row styling to ensure there is no extra gap */
+.row {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Section styling */
+section {
+    margin-top: 0 !important; /* Remove top margin */
+    margin-bottom: 0 !important; /* Remove bottom margin */
+}
+
+/* Add this to remove unnecessary padding from col classes */
+[class^="col-"] {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}

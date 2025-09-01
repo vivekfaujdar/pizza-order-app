@@ -1,0 +1,75 @@
+<!-- <form #adminLogin="ngForm" (ngSubmit)="login(adminLogin.value)" class="container" >
+    
+    <h3 >Login Form</h3>
+
+    <p style="color: red;">{{authError}}</p>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" ngModel name="email" required>
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control form-control-sm" id="exampleInputPassword1" placeholder="Password" ngModel name="password" required>
+    </div>
+    
+    <button type="submit" class="btn btn-primary btn-sm" style="margin-top: 10px;">Login</button>
+  </form>
+
+   -->
+   <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form #adminLogin="ngForm" (ngSubmit)="login(adminLogin.value)" class="p-4 bg-light rounded">
+          <h3 class="text-center mb-4">Login Form</h3>
+  
+          <!-- Display Authentication Error -->
+          <p *ngIf="authError" class="text-danger text-center">{{ authError }}</p>
+  
+          <!-- Email Address Input -->
+          <div class="form-group mb-3">
+            <label for="exampleInputEmail1">Email Address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+              ngModel
+              name="email"
+              required
+              #email="ngModel"
+              [ngClass]="{ 'is-invalid': email.invalid && email.touched }"
+            />
+            <small *ngIf="email.invalid && email.touched" class="text-danger">
+              Please enter a valid email address.
+            </small>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+  
+          <!-- Password Input -->
+          <div class="form-group mb-3">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="Password"
+              ngModel
+              name="password"
+              required
+              #password="ngModel"
+              [ngClass]="{ 'is-invalid': password.invalid && password.touched }"
+            />
+            <small *ngIf="password.invalid && password.touched" class="text-danger">
+              Password is required.
+            </small>
+          </div>
+  
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary w-100" [disabled]="adminLogin.invalid" style="margin-top: 10px;">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

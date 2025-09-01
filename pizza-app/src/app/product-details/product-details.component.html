@@ -1,0 +1,61 @@
+<div class="container mt-5" *ngIf="productData"> 
+  <div class="row">
+    <!-- Pizza Image Section -->
+    <div class="col-md-6">
+      <div class="image-container">
+        <img [src]="productData.imageUrl" class="img-fluid" alt="{{ productData.name }}">
+      </div>
+    </div>
+
+    <!-- Pizza Details Section -->
+    <div class="col-md-6">
+      <h2>{{ productData.name }}</h2>
+      <p><strong>Type:</strong> {{ productData.type }}</p>
+      <p><strong>Pizza Size:</strong> {{ productData.pizzaSize }}</p>
+      <p><strong>Crust Type:</strong> {{ productData.crustType }}</p>
+      <p><strong>Toppings:</strong> {{ productData.toppings }}</p>
+      <p><strong>Price:</strong> Rs. {{ productData.price }}</p>
+      <p><strong>Description:</strong> {{ productData.description }}</p>
+
+      <!-- Quantity Selector -->
+      <!-- <div class="quantity mt-4">
+        <label for="quantity">Quantity: </label>
+        <input type="number" [(ngModel)]="productQuantity" class="form-control" min="1" max="10" id="quantity">
+      </div> -->
+      <div class="quantity-group">
+        <button (click)="handleQuantity('min')" >-</button>
+        <input type="text" [(ngModel)]="productQuantity" value="{{productQuantity}}" />
+        <button (click)="handleQuantity('plus')">+</button>
+
+    </div>
+      <!-- Coupon Code Input -->
+      <div class="coupon mt-3">
+        <label for="couponCode">Apply Coupon Code:</label>
+        <input type="text" [(ngModel)]="couponCode" class="form-control" id="couponCode" placeholder="Enter coupon code">
+        <button class="btn btn-primary mt-2" (click)="applyCoupon()">Apply Coupon</button>
+      </div>
+
+      <!-- Final Price Calculation -->
+      <div class="total-price mt-3">
+        <p><strong>Total Price: </strong>Rs. {{ productQuantity * finalPrice }}</p>
+      </div>
+
+      <!-- Display coupon error if invalid or expired -->
+      <div *ngIf="couponError" class="text-danger mt-2">
+        {{ couponError }}
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-buttons mt-4">
+        <button (click)="addToCart()" class="btn btn-success">Add to Cart</button>
+        <!-- <button [routerLink]="['/checkout', productData.id]" (click)="buyNow()" class="btn btn-primary ml-2">Buy Now</button> -->
+        <button [routerLink]="['/checkout', productData.id]" (click)="buyNow()" class="btn btn-primary ml-2">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Loading state when productData is undefined -->
+<div class="container mt-5" *ngIf="!productData">
+  <p>Loading product details...</p>
+</div>

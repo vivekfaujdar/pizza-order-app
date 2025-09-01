@@ -1,0 +1,36 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Available Coupons</h2>
+  
+    <!-- Coupon List Table -->
+    <div class="card">
+      <div class="card-header">
+        <h4 class="mb-0">Coupon Details</h4>
+      </div>
+      <div class="card-body p-0">
+        <table class="table table-striped table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Coupon ID</th>
+              <th scope="col">Coupon Code</th>
+              <th scope="col">Discount (%)</th>
+              <th scope="col">Expiration Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let coupon of coupons">
+              <td>{{ coupon.couponId }}</td>
+              <td>{{ coupon.couponCode }}</td>
+              <td>{{ coupon.discountPercentage }}%</td>
+              <td>{{ coupon.expirationDate | date: 'mediumDate' }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+    <!-- Show a message if no coupons are available -->
+    <div *ngIf="coupons.length === 0" class="text-center mt-4">
+      <p class="text-muted">No coupons available at the moment.</p>
+    </div>
+  </div>
+  

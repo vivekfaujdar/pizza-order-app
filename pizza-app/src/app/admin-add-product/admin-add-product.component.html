@@ -1,0 +1,256 @@
+<!-- <form #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)" class="common-form">
+<section class="h-100 bg-dark">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                  alt="Sample photo" class="img-fluid"
+                  style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+              </div>
+              <div class="col-xl-6">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="mb-5 text-uppercase">Add Pizza</h3>
+  
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="text" id="form3Example9" class="form-control form-control-lg" ngModel name="name" />
+                    <label class="form-label" for="form3Example9">Pizza Name</label>
+                  </div>
+  
+                   -->
+                  <!-- <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div data-mdb-input-init class="form-outline">
+                        <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example1m">Pizza Name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div data-mdb-input-init class="form-outline">
+                        <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example1n">Last name</label>
+                      </div>
+                    </div>
+                  </div> -->
+                  <!-- <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+  
+                    <h6 class="mb-0 me-4">Pizza Type: </h6>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender" value="option1" ngModel name="name" />
+                      <label class="form-check-label" for="femaleGender">VEG</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                        value="option2" ngModel name="name"/>
+                      <label class="form-check-label" for="maleGender">NON-VEG</label>
+                    </div>
+  
+                  </div>
+                  <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+  
+                    <h6 class="mb-0 me-4">Pizza Size </h6>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                        value="option1" ngModel name="name" />
+                      <label class="form-check-label" for="femaleGender">Small</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                        value="option2" ngModel name="name" />
+                      <label class="form-check-label" for="maleGender">Medium</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline mb-0">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                        value="option3" ngModel name="name"/>
+                      <label class="form-check-label" for="otherGender">Large</label>
+                    </div>
+  
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <select [(ngModel)]="crustType" name="crustType" required>
+                        <option value="">Select Crust Type</option>
+                        <option value="CHEESY">Cheesy</option>
+                        <option value="HAND_TOSSED">Hand Tossed</option>
+                        <option value="THIN_AND_CRISPY">Thin and Crispy</option>
+                        <option value="DEEP_PAN">Deep Pan</option>
+                      </select>
+                    </div>
+                  </div>
+                    <div class="col-md-6 mb-4">
+  
+                      <select data-mdb-select-init>
+                        <option value="1">Toppings</option>
+                        <option value="2">PEPPERONI</option>
+                        <option value="3">MUSHROOMS</option>
+                        <option value="5">ONIONS</option>
+                        <option value="6">SAUSAGE</option>
+                        <option value="7">BACON</option>
+                        <option value="8">BLACK_OLIVES</option>
+                        <option value="9">GREEN_PEPPERS</option>
+                        <option value="10">PINEAPPLE</option>
+                        <option value="11">EXTRA_CHEESE</option>
+
+                      </select>
+  
+                    </div>
+                  </div>
+
+                 
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="text" id="form3Example90" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example90">Description</label>
+                  </div>
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="text" id="form3Example90" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example90">imageUrl</label>
+                  </div>
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="text" id="form3Example90" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example90">Price</label>
+                  </div>
+                  
+  
+                  <div class="d-flex justify-content-end pt-3">
+                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-light btn-lg">Reset all</button>
+                    <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-lg ms-2">Submit</button>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </form> -->
+
+  <form #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)" class="common-form">
+    <section class="h-100 bg-dark">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col">
+            <div class="card card-registration my-4">
+              <div class="row g-0">
+                <div class="col-xl-6 d-none d-xl-block">
+                  <img src="https://plus.unsplash.com/premium_photo-1679924471066-dd984e92f395?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Sample photo" class="img-fluid" style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+                </div>
+                <div class="col-xl-6">
+                  <div class="card-body p-md-5 text-black">
+                    <h3 class="mb-5 text-uppercase">Add Pizza</h3>
+  
+                    <!-- Pizza Name -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <input type="text" class="form-control form-control-lg" [(ngModel)]="product.name" name="name" required />
+                      <label class="form-label">Pizza Name</label>
+                    </div>
+  
+                    <!-- Pizza Type -->
+                    <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                      <h6 class="mb-0 me-4">Pizza Type: </h6>
+                      <div class="form-check form-check-inline mb-0 me-4">
+                        <input class="form-check-input" type="radio" [(ngModel)]="product.type" name="type" value="VEG" />
+                        <label class="form-check-label">VEG</label>
+                      </div>
+                      <div class="form-check form-check-inline mb-0 me-4">
+                        <input class="form-check-input" type="radio" [(ngModel)]="product.type" name="type" value="NON_VEG" />
+                        <label class="form-check-label">NON-VEG</label>
+                      </div>
+                    </div>
+  
+                    <!-- Pizza Size -->
+                    <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                      <h6 class="mb-0 me-4">Pizza Size: </h6>
+                      <div class="form-check form-check-inline mb-0 me-4">
+                        <input class="form-check-input" type="radio" [(ngModel)]="product.pizzaSize" name="pizzaSize" value="SMALL" />
+                        <label class="form-check-label">Small</label>
+                      </div>
+                      <div class="form-check form-check-inline mb-0 me-4">
+                        <input class="form-check-input" type="radio" [(ngModel)]="product.pizzaSize" name="pizzaSize" value="MEDIUM" />
+                        <label class="form-check-label">Medium</label>
+                      </div>
+                      <div class="form-check form-check-inline mb-0">
+                        <input class="form-check-input" type="radio" [(ngModel)]="product.pizzaSize" name="pizzaSize" value="LARGE" />
+                        <label class="form-check-label">Large</label>
+                      </div>
+                    </div>
+  
+                    <!-- Crust Type -->
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <select class="form-control" [(ngModel)]="product.crustType" name="crustType" required>
+                          <option value="">Select Crust Type</option>
+                          <option value="CHEESY">Cheesy</option>
+                          <option value="HAND_TOSSED">Hand Tossed</option>
+                          <option value="THIN_AND_CRISPY">Thin and Crispy</option>
+                          <option value="DEEP_PAN">Deep Pan</option>
+                        </select>
+                      </div>
+                    </div>
+  
+                    <!-- Toppings -->
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <select class="form-control" [(ngModel)]="product.toppings" name="toppings" required>
+                          <option value="">Select Toppings</option>
+                          <option value="PEPPERONI">Pepperoni</option>
+                          <option value="MUSHROOMS">Mushrooms</option>
+                          <option value="ONIONS">Onions</option>
+                          <option value="SAUSAGE">Sausage</option>
+                          <option value="BACON">Bacon</option>
+                          <option value="BLACK_OLIVES">Black Olives</option>
+                          <option value="GREEN_PEPPERS">Green Peppers</option>
+                          <option value="PINEAPPLE">Pineapple</option>
+                          <option value="EXTRA_CHEESE">Extra Cheese</option>
+                        </select>
+                      </div>
+                    </div>
+  
+                    <!-- Description -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <input type="text" class="form-control form-control-lg" [(ngModel)]="product.description" name="description" required />
+                      <label class="form-label">Description</label>
+                    </div>
+  
+                    <!-- Image URL -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <input type="text" class="form-control form-control-lg" [(ngModel)]="product.imageUrl" name="imageUrl" required />
+                      <label class="form-label">Image URL</label>
+                    </div>
+  
+                    <!-- Price -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <input type="number" class="form-control form-control-lg" [(ngModel)]="product.price" name="price" required />
+                      <label class="form-label">Price</label>
+                    </div>
+  
+                    <div class="d-flex justify-content-end pt-3">
+                      <button type="button" class="btn btn-light btn-lg" (click)="resetForm()">Reset all</button>
+                      <button type="submit" class="btn btn-warning btn-lg ms-2">Add Pizza</button>
+                    </div>
+  
+                    <!-- Success Message -->
+                    <div *ngIf="addProductMessage" class="alert alert-success mt-3">
+                      {{ addProductMessage }}
+                    </div>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </form>
+  
+  
